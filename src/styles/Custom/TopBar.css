@@ -1,0 +1,108 @@
+.topbar-main-container{
+    width: 100%;
+    height: 7vh;
+    background-color: white;
+    
+}
+
+.topbar-logo-icon{
+    width: 9%;
+    margin-top: 1vh;
+}
+
+.search-bar-main-container{
+    border-radius: 25px;
+    background-color: #EEEEEE;
+    width: 73%;
+    height: 68%;
+    margin-top: 1vh;
+    border: 1px solid #D1D1D1;
+}
+
+.search-bar-main-container form{
+    width: 95%;
+    height: 3vh;
+    background-color: transparent;
+}
+
+.search-button{
+    width: 6%;
+    border: none;
+}
+
+.search-icon{
+    width: 100%;
+}
+
+.search-input{
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0 1vw;
+    width: 80%;
+    height: 100%;
+    margin-left: 2vw;
+    background-color: transparent;
+    border: none;
+}
+
+.search-input:active{
+    border: none;
+}
+
+.topbar-menu-icon{
+    width: 5%;
+    margin-top: 1vh;
+}
+
+.floating-menu-main-container{
+    width: 60%;
+    height: 20vh;
+    background-color: white;
+    position: absolute;
+    top: 7vh;
+    right: 4vw;
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+    box-shadow: 1px 3px 22px 0px lightgray;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.floating-menu-main-container.opened{
+    opacity: 1;
+}
+
+
+.floating-menu-section{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-menu-section.divider{
+    border-bottom: 1px solid #D1D1D1;
+}
+
+.sign-out-button{
+    padding: 2vw;
+    background-color: gold;
+    font-weight: bold;
+    font-size: 1.6rem;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+}
+
+.floating-menu-item{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-menu-heart-icon{
+    width: 8%;
+    margin-right: 2vw;
+}

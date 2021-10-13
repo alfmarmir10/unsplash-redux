@@ -1,0 +1,76 @@
+.login-main-container{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-icon{
+    width: 20vw;
+    height: 20vw;
+}
+
+.googleButtonContainer{
+    background-color: white;
+    width: 60vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    margin-top: 4vh;
+    border-radius: 10px;
+    border: 0.5px solid lightgray;
+}
+
+.googleButtonContainer:active{
+    background-color: rgba(0,0,0,0.02);
+}
+
+.googleIconButton{
+    width: 10%;
+    margin-right: 2vw;
+}
+
+.form-login-email{
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.form-login-email input,label, button{
+    width: 90%;
+}
+
+.form-login-email label{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.form-login-email input{
+    height: 5vh;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0 2vw;
+}
+
+.forgot-password-link{
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    color: #7d7d7d;
+}
+
+.login-button{
+    width: 92%;
+    height: 6vh;
+    background-color: #111111;
+    border-radius: 5px;
+}
+
+.sign-up-link{
+    color: #7d7d7d;
+}
