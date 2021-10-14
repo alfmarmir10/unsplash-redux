@@ -1,6 +1,7 @@
 import { types } from "../types/types";
 import {getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth';
 import firebaseapp from "../firebase/firebase.config";
+import { fetchHomePhotos } from "./content.actions";
 
 export const setUser = (payload) => ({
     type: types.setUser,
@@ -20,6 +21,7 @@ export const loginWithGoogle = () => {
             if(user!==undefined){
                 localStorage.setItem('user', JSON.stringify(user));
                 dispatch(setUser(user));
+                fetchHomePhotos();
             }
         } catch (error) {
             console.error(error);
@@ -38,6 +40,7 @@ export const loginWithEmailAndPass = (payload) => {
                 const user = userCredential.user;
                 localStorage.setItem('user', JSON.stringify(user));
                 dispatch(setUser(user));
+                fetchHomePhotos();
                 // ...
             })
             .catch((error) => {
