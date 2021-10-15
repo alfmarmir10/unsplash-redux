@@ -71,6 +71,7 @@
 .floating-menu-main-container.opened{
     opacity: 1;
     right: 4vw;
+    z-index: 1;
 }
 
 

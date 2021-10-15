@@ -81,7 +81,7 @@ const HomePhotoContainer = (props) => {
 
 
     return (
-        <div className="home-photo-main-container" onClick={handleClick}>
+        <div className="home-photo-main-container">
             {
                 obj ? (
                     <>
@@ -89,7 +89,7 @@ const HomePhotoContainer = (props) => {
                             <img src={obj.user.profile_image.medium} alt={obj.user.name} className="user-img"/>
                             <p className="user-name">{obj.user.name}</p>
                         </div>
-                        <img src={obj.urls.small} alt={obj.alt_description}  className="home-photo"/>
+                        <img src={obj.urls.small} alt={obj.alt_description}  className="home-photo" onClick={handleClick} />
                         <div className="photo-actions-main-container">
                             <div className="photo-action-first-section">
                                 <div className={lovedClass} onClick={toogleLoved}>
