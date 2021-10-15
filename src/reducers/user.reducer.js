@@ -4,7 +4,11 @@ const initialState = {
     displayName: "",
     email: "",
     uid: "",
-    photoURL: ""
+    photoURL: "",
+    loved:{
+        ids:[],
+        objs:{}
+    }
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -23,6 +27,30 @@ export const userReducer = (state = initialState, action) => {
                 email: "",
                 uid: "",
                 photoURL: ""
+            }
+        case types.setLoved:
+            return{
+                ...state,
+                loved:{
+                    ...state.loved,
+                    ids: [...state.loved.ids, action.payload.id],
+                    objs:{
+                        ...state.loved.objs,
+                        [action.payload.id]: action.payload.obj
+                    }
+                }
+            }
+        case types.removeLoved:
+            return{
+                ...state,
+                loved:{
+                    ...state.loved, 
+                    ids: state.loved.ids.filter(item => item!==action.payload.id),
+                    objs:{
+                        ...state.loved.objs,
+                        [action.payload.id]: ""
+                    }
+                }
             }
         default:
             return state

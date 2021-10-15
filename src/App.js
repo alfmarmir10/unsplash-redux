@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import { store } from './store/store';
+import Details from './views/Details';
 import Home from './views/Home';
 import Login from './views/Login';
 import Saved from './views/Saved';
@@ -20,6 +21,9 @@ const App = () => {
           </Route>
           <Route path="/Saved">
             <Saved />
+          </Route>
+          <Route path="/Details">
+            <Details />
           </Route>
           <Route path="/">
             <Login />

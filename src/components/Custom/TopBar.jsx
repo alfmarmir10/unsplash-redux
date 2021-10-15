@@ -52,7 +52,7 @@ const TopBar = () => {
             </div>
             <img src={Menu} alt="Menu icon" className="topbar-menu-icon" onClick={toogleTopBarMenu}/>
             <div className={floatingMenuClass}>
-                <div className="floating-menu-section divider">
+                <div className="floating-menu-section divider" onClick={()=>history.push("/Saved")}>
                     <img src={Heart} alt="Heart icon" className="floating-menu-heart-icon" />
                     <p className="font-weight-normal font-size-sm">Saved</p>
                 </div>

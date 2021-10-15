@@ -1,7 +1,11 @@
 import { types } from "../types/types";
 
 const  initialState = {
-    homePhotos:""
+    homePhotos:"",
+    topics:"",
+    activeTopic:"Editorial",
+    viewingPhoto:null,
+    viewingPhotoStatistics:null
 }
 
 export const contentReducer = (state=initialState, action)=>{
@@ -10,6 +14,28 @@ export const contentReducer = (state=initialState, action)=>{
             return {
                 ...state,
                 homePhotos: action.payload
+            }   
+        case types.setTopics:
+            return {
+                ...state,
+                topics: action.payload
+            }   
+    
+        case types.setActiveTopic:
+            return {
+                ...state,
+                activeTopic: action.payload
+            }   
+        
+        case types.setViewingPhoto:
+            return {
+                ...state,
+                viewingPhoto: action.payload
+            }   
+        case types.setViewingPhotoStatistics:
+            return {
+                ...state,
+                viewingPhotoStatistics: action.payload
             }   
     
         default:

@@ -1,0 +1,15 @@
+.saved-image-renderer-main-container{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85vh;
+    overflow-y: scroll;
+}
+
+.like-some-photos{
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 5vh;
+}

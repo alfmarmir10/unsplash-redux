@@ -8,6 +8,16 @@ export const setUser = (payload) => ({
     payload
 })
 
+export const setLoved = (payload) => ({
+    type: types.setLoved,
+    payload
+})
+
+export const removeLoved = (payload) => ({
+    type: types.removeLoved,
+    payload
+})
+
 export const signOutUser = () => ({
     type: types.signOutUser
 })

@@ -4,9 +4,10 @@ import { fetchHomePhotos, setHomePhotos } from '../actions/content.actions';
 import Navbar from '../components/Custom/Navbar';
 import TopBar from '../components/Custom/TopBar';
 import HomeImageRenderer from '../components/Home/HomeImageRenderer';
+import '../styles/Home/Home.css';
 
 const Home = () => {
-    const {homePhotos} = useSelector(state => state.content)
+    const {homePhotos} = useSelector(state => state.content);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,12 +27,12 @@ const Home = () => {
     }, [homePhotos])
 
     return (
-        <div>
+        <div className="home-main-container">
             <TopBar />
             <Navbar />
             {
                 homePhotos!=="" ? (
-                    <HomeImageRenderer x="wdasd"/>
+                    <HomeImageRenderer/>
                 ) : (
                     <></>
                 )
