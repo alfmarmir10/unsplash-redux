@@ -13,12 +13,12 @@ const Home = () => {
     useEffect(() => {
         if(homePhotos===""){
             console.log("Home Photos ''");
-            if(localStorage.getItem('homePhotos')!==null){
+            if(localStorage.getItem('homePhotos')!==null && localStorage.getItem('homePhotos').indexOf("errors") <= -1){
                 console.log("localStorage lleno");
                 dispatch(setHomePhotos(JSON.parse(localStorage.getItem('homePhotos'))));
             } else {
                 console.log("localStorage vacío, fetching");
-                dispatch(fetchHomePhotos());
+                dispatch(fetchHomePhotos("Home"));
             }
         } else {
          console.log(homePhotos);   
