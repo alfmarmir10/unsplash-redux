@@ -16,6 +16,7 @@ export const userReducer = (state = initialState, action) => {
     switch(action.type){
         case types.setUser:
             return{
+                ...state,
                 displayName: action.payload.displayName,
                 email: action.payload.email,
                 uid: action.payload.uid,
@@ -26,7 +27,11 @@ export const userReducer = (state = initialState, action) => {
                 displayName: "",
                 email: "",
                 uid: "",
-                photoURL: ""
+                photoURL: "",
+                loved:{
+                    ids:[],
+                    objs:{}
+                }
             }
         case types.setLoved:
             return{
