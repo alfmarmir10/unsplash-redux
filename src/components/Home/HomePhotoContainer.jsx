@@ -17,7 +17,12 @@ const HomePhotoContainer = (props) => {
     const [ObjToDownload, setObjToDownload] = useState();
     const {obj} = props;
 
-    const lovedClass = (obj!==null && loved.ids.includes(obj.id)) ? "add-favorite-icon-container active" : "add-favorite-icon-container";
+    let lovedClass = "add-favorite-icon-container";
+    try {
+        lovedClass = (obj!==null && loved.ids.includes(obj.id)) ? "add-favorite-icon-container active" : "add-favorite-icon-container";
+    } catch (error) {
+        
+    }
 
     const handleClick = () => {
         dispatch(setViewingPhoto(obj));
